@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Pescaria - Guia de Pesca Esportiva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css' rel='stylesheet' />
+
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logotipo Guia de Pesca Esportiva">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="destinos.html">Destinos de Pesca</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1>Agende Sua Pescaria</h1>
+            </div>
+        </section>
+
+        <section class="content-section booking-content">
+            <div class="container">
+                <p class="intro-text">Utilize nosso calendário para verificar a disponibilidade e preencha o formulário abaixo para solicitar sua reserva. Entraremos em contato para confirmar os detalhes!</p>
+
+                <div class="booking-grid">
+                    <div class="calendar-container">
+                        <h2>Calendário de Disponibilidade</h2>
+                        <div id="calendar"></div>
+                        <p class="calendar-legend">
+                            <span class="legend-available"></span> Disponível
+                            <span class="legend-booked"></span> Ocupado
+                            <span class="legend-selected"></span> Selecionado
+                        </p>
+                    </div>
+
+                    <div class="booking-form-container">
+                        <h2>Solicitar Reserva</h2>
+                        <form id="bookingForm" class="booking-form" action="https://formspree.io/f/mrbkkeez" method="POST">
+                            <input type="hidden" name="_subject" value="Nova Solicitação de Pescaria pelo Site!">
+                            <input type="hidden" name="_replyto" id="bookingReplyToEmail">
+
+                            <div class="form-group">
+                                <label for="bookingDate">Data da Pescaria:</label>
+                                <input type="text" id="bookingDate" name="bookingDate" readonly required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fullName">Seu Nome Completo:</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Ex: João da Silva" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Seu E-mail:</label>
+                                <input type="email" id="email" name="email" placeholder="Ex: seuemail@dominio.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone (WhatsApp preferencial):</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Ex: (16) 99876-5432" required>
+                            </div>
+
+                        
+
+                            <div class="form-group">
+                                <label for="fishingType">Tipo de Pescaria:</label>
+                                <select id="fishingType" name="fishingType" required>
+                                    <option value="">Selecione um pacote</option>
+                                    <option value="dupla">Diária - Dupla (2 pessoas - R$ 800)</option>
+                                    <option value="trio">Diária - Trio (3 pessoas - R$ 900)</option>
+                                    </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensagem/Observação:
+Nosso barco comporta até 3 pessoas.
+Se seu grupo for maior, mande uma mensagem na nossa página de contato — temos outros barcos disponíveis e organizamos tudo pra você! 🎣
+
+:</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Compartilhe detalhes, preferências ou dúvidas."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Solicitar Reserva</button>
+                            <p id="formMessage" class="form-message"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Contato</h3>
+                    <p>Telefone: (16) 9XXXX-XXXX</p>
+                    <p>Email: contato@guiadepesca.com.br</p>
+                    <p>Localização: Miguelópolis, SP, Brasil</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <ul>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Guia de Pesca Esportiva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

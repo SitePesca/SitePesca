@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Guia de Pesca Esportiva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logotipo Guia de Pesca Esportiva">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="destinos.html">Destinos de Pesca</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1>Fale Conosco</h1>
+            </div>
+        </section>
+
+        <section class="content-section contact-content">
+            <div class="container">
+                <p class="intro-text">Tem alguma dúvida, sugestão ou precisa de um orçamento personalizado? Envie-nos uma mensagem ou utilize nossos canais de contato direto. Estamos prontos para ajudar a planejar sua próxima aventura!</p>
+
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2>Envie Sua Mensagem</h2>
+                        <form id="contactForm" class="contact-form" action="SEU_ENDPOINT_DO_FORMSPREE_CONTATO_AQUI" method="POST">
+                            <input type="hidden" name="_subject" value="Nova Mensagem de Contato do Site!">
+                            <input type="hidden" name="_replyto" id="contactReplyToEmail">
+
+                            <div class="form-group">
+                                <label for="contactName">Seu Nome:</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="Ex: Ana Paula" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Seu E-mail:</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="Ex: seuemail@dominio.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactSubject">Assunto:</label>
+                                <input type="text" id="contactSubject" name="contactSubject" placeholder="Ex: Dúvida sobre pacotes" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Sua Mensagem:</label>
+                                <textarea id="contactMessage" name="contactMessage" rows="7" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                            <p id="contactFormMessage" class="form-message"></p>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-container">
+                        <h2>Informações de Contato</h2>
+                        <div class="info-item">
+                            <img src="img/icon-phone.png" alt="Ícone Telefone">
+                            <p><strong>Telefone/WhatsApp:</strong> <br> (16) 9XXXX-XXXX</p>
+                        </div>
+                        <div class="info-item">
+                            <img src="img/icon-email.png" alt="Ícone E-mail">
+                            <p><strong>E-mail:</strong> <br> contato@guiadepesca.com.br</p>
+                        </div>
+                        <div class="info-item">
+                            <img src="img/icon-location.png" alt="Ícone Localização">
+                            <p><strong>Localização:</strong> <br> Rua dos Pescadores, 123 <br> Miguelópolis, SP, Brasil</p>
+                        </div>
+                        <div class="social-media">
+                            <h3>Nossas Redes Sociais</h3>
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="img/icon-facebook.png" alt="Facebook"> Facebook</a></li>
+                                <li><a href="#" target="_blank"><img src="img/icon-instagram.png" alt="Instagram"> Instagram</a></li>
+                                <li><a href="#" target="_blank"><img src="img/icon-youtube.png" alt="YouTube"> YouTube</a></li>
+                            </ul>
+                        </div>
+                        <div class="map-container">
+                            <h2>Onde Estamos</h2>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15443.080556608552!2d-48.33083416972078!3d-20.170669222453887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb2e600c61b179%3A0x6e7889f0a5976b3!2sMiguel%C3%B3polis%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Contato</h3>
+                    <p>Telefone: (16) 9XXXX-XXXX</p>
+                    <p>Email: contato@guiadepesca.com.br</p>
+                    <p>Localização: Miguelópolis, SP, Brasil</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <ul>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Guia de Pesca Esportiva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Guia de Pesca Esportiva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logotipo Guia de Pesca Esportiva">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="destinos.html">Destinos de Pesca</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1>Finalize Sua Reserva</h1>
+            </div>
+        </section>
+
+        <section class="content-section checkout-content">
+            <div class="container">
+                <h2>Resumo da Sua Pescaria</h2>
+                <div class="checkout-summary">
+                    <p><strong>Nome Completo:</strong> <span id="summaryFullName"></span></p>
+                    <p><strong>E-mail:</strong> <span id="summaryEmail"></span></p>
+                    <p><strong>Telefone:</strong> <span id="summaryPhone"></span></p>
+                    <p><strong>Data(s) da Pescaria:</strong> <span id="summaryDates"></span></p>
+                    <p><strong>Pacote Selecionado:</strong> <span id="summaryFishingType"></span></p>
+                    <p><strong>Número de Pescadores:</strong> <span id="summaryNumAnglers"></span></p>
+                    <p><strong>Observações:</strong> <span id="summaryMessage"></span></p>
+                    <hr>
+                    <p><strong>Valor Total da Pescaria:</strong> <span id="summaryTotalPrice">R$ 0,00</span></p>
+                    <h3>Valor do Sinal a Pagar (30%): <span id="summarySignalValue">R$ 0,00</span></h3>
+                </div>
+
+                <div class="payment-instructions">
+                    <h2>Instruções para Pagamento via Pix (PicPay)</h2>
+                    <p>Para confirmar sua reserva, por favor, realize o pagamento do **valor do sinal** via Pix para a chave abaixo:</p>
+                    
+                    <div class="pix-details">
+                        <p><strong>Chave Pix (Telefone):</strong> <code>16994398814</code></p>
+                        <p>
+                            <img src="img/qrcode-pix.png" alt="QR Code Pix para Pagamento do Sinal" class="qrcode-pix">
+                        </p>
+                        <p class="pix-copy-paste">
+                            Se preferir, copie e cole a chave Pix: <span id="pixKeyToCopy">16994398814</span> 
+                            <button class="btn-copy-pix">Copiar Chave</button>
+                        </p>
+                        <p class="pix-info-extra">
+                            Após realizar o pagamento do sinal, sua reserva será alterada para o status **"Sinal Pago"** em nosso sistema. O restante do valor (70%) deverá ser acertado no local, no dia da pescaria. Qualquer dúvida, entre em contato!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="checkout-actions">
+                    <p>
+                        <button class="btn btn-primary" id="confirmPaymentBtn">Já Realizei o Pagamento e Quero Confirmar!</button>
+                        <a href="agendamento.html" class="btn btn-secondary" style="margin-left: 10px;">Voltar para Agendamento</a>
+                    </p>
+                    <p id="checkoutMessage" class="form-message"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Contato</h3>
+                    <p>Telefone: (16) 9XXXX-XXXX</p>
+                    <p>Email: contato@guiadepesca.com.br</p>
+                    <p>Localização: Miguelópolis, SP, Brasil</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <ul>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Guia de Pesca Esportiva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
